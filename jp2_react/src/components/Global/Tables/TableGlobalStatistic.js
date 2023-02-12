@@ -93,6 +93,7 @@ export const TableGlobalStatistic = (props) => {
                   <TableCell
                     sx={{
                       backgroundColor: "primary.main",
+                      color: "white"
                     }}
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                   >

@@ -25,7 +25,10 @@ export default function Home() {
       <Typography color="primary" variant="h5" sx={{ mt: 3 }}>
         Pokud se chcete dozvědět něco víc o autorovi této aplikace i o aplikaci
         samotné, klikněte
-        <Link sx={{ ml: 1 }} href="/aboutme#/aboutme">
+        <Link sx={{ ml: 1 }} 
+        //href="/aboutme"
+        href="/aboutme#/aboutme/"
+        >
           ZDE
         </Link>
       </Typography>

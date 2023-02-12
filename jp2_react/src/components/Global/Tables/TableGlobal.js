@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination, useRowSelect } from "react-table";
+import {
+  useTable,
+  useSortBy,
+  useGlobalFilter,
+  useFilters,
+  usePagination,
+  useRowSelect,
+} from "react-table";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FilterAltRoundedIcon from "@mui/icons-material/FilterAltRounded";
 import { GlobalFilter } from "../../Material/GlobalFilter";
@@ -44,10 +51,7 @@ import {
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 
-
 function TableGlobal(props) {
-  
-
   const columns = useMemo(() => props.columns, []);
   // const data = useMemo(() => props.dataAPI);
   const data = props.dataAPI;
@@ -118,7 +122,6 @@ function TableGlobal(props) {
       fontSize: 13,
     },
   }));
-
 
   //po dobu načítání dat se ukazuje tato komponenta, až poté se načte tabulka
   if (loading) {
@@ -234,6 +237,7 @@ function TableGlobal(props) {
                     <TableCell
                       sx={{
                         backgroundColor: "primary.main",
+                        color: "white",
                       }}
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                     >
@@ -299,9 +303,9 @@ function TableGlobal(props) {
         </TableContainer>
 
         <Stack
-          direction="row"
+          direction={{ xs: "column", sm: "row" }}
           alignItems="center"
-          spacing={4}
+          spacing={1}
           justifyContent="space-between"
         >
           <ButtonGroup
@@ -378,27 +382,6 @@ function TableGlobal(props) {
               Přidat {props.name}
             </Button>
           </Stack>
-
-          {/* <Button
-          type="delete"
-          size="small"
-          variant="outlined"
-          color="error"
-          startIcon={<DeleteOutlinedIcon />}
-          disabled={selectedFlatRows.length < 1}
-          onClick={(e) =>
-            selectedFlatRows.map(
-              (row) => (
-                console.log(row.original.id),
-                postDelete(row.original.id, e, props.type)
-              )
-              //postDelete(row.original.id, e)
-              //navigate("/")
-            )
-          }
-        >
-          Vymazat
-        </Button> */}
         </Stack>
       </Paper>
       {/* <pre>

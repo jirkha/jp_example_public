@@ -268,12 +268,26 @@ export default function NavbarJP() {
                 variant="button"
                 underline="hover"
                 href={item.href}
-                onClick={() => navigate(item.href)}
+                onClick={() => (navigate(item.href), setOpen(false))}
               >
                 {item.name}
               </Link>
             </ListItem>
           ))}
+          <ListItem>
+            <Link
+              //className={styles.link}
+              component="button"
+              //key={item.name}
+              color="textPrimary"
+              variant="button"
+              underline="hover"
+              href="/aboutme"
+              onClick={() => (navigate("/aboutme"), setOpen(false))}
+            >
+              O autorovi
+            </Link>
+          </ListItem>
         </List>
       </SwipeableDrawer>
     </AppBar>
