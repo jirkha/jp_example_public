@@ -23,14 +23,13 @@ export default function Home() {
         další.
       </Typography>
       <Typography color="primary" variant="h5" sx={{ mt: 3 }}>
-        Pokud se chcete dozvědět něco víc o autorovi této aplikace i o aplikaci
-        samotné, klikněte
-        <Link sx={{ ml: 1 }} 
+        Pokud se chcete dozvědět něco víc o autorovi této aplikace, navštivte sekci O AUTOROVI.
+        {/* <Link sx={{ ml: 1 }} 
         //href="/aboutme"
         href="/aboutme#/aboutme/"
         >
           ZDE
-        </Link>
+        </Link> */}
       </Typography>
       <Stack
         direction={{ sm: "column", md: "row" }}
