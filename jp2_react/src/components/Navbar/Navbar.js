@@ -193,7 +193,7 @@ export default function NavbarJP() {
               </Grid>
             </Grid>
           </Box>
-          <Box sx={{ display: { xs: "none", md: "inline" } }}>
+          {/* <Box sx={{ display: { xs: "none", md: "inline" } }}>
             <Grid container>
               <Grid item xs={12}>
                 <Link
@@ -227,7 +227,7 @@ export default function NavbarJP() {
                 </Link>
               </Grid>
             </Grid>
-          </Box>
+          </Box> */}
 
           <Box sx={{ display: { xs: "block", md: "none" } }}>
             <IconButton onClick={() => setOpen(true)}>
@@ -274,7 +274,7 @@ export default function NavbarJP() {
               </Link>
             </ListItem>
           ))}
-          <ListItem>
+          {/* <ListItem>
             <Link
               //className={styles.link}
               component="button"
@@ -287,7 +287,7 @@ export default function NavbarJP() {
             >
               O autorovi
             </Link>
-          </ListItem>
+          </ListItem> */}
         </List>
       </SwipeableDrawer>
     </AppBar>

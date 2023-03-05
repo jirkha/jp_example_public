@@ -1,33 +1,34 @@
-import { Link } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap'
-import { Stack, Typography, Box } from "@mui/material";
-import logo from '../assets/JP_logo_black.png';
+import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import { Stack, Typography, Box, Divider } from "@mui/material";
+import logo from "../assets/JP_logo_black.png";
+import jirivecko from "../assets/jiri_vecko_logo_sm.jpeg";
 
 const Footer = () => {
+  return (
+    <>
+      <Divider sx={{ mt: 5 }} />
+      <Stack
+        component="footer"
+        direction={{ xs: "column", sm: "row" }}
+        sx={{ justifyContent: "space-evenly", alignItems: "center", p: 1 }}
+      >
+        <Typography variant="h5" color="primary">
+          © Jiří Vecko
+        </Typography>
+        <a href="https://www.jirivecko.cz">
+          <Typography variant="h6">www.jirivecko.cz</Typography>
+        </a>
+        <Box
+          component="img"
+          src={jirivecko}
+          sx={{ width: "4%" }}
+          //sx={{ width: "180px", height: "45px" }}
+          alt="Logo"
+        />
 
-    return (
-      <>
-        {/* <Container>
-          <Row className="text-center py-3">
-            <Col>
-              <hr />
-              <h1>J&P CANDLES</h1>
-
-              <Col>
-                <img src={logo} width="140" height="35" alt="Logo" />
-              </Col>
-            </Col>
-          </Row>
-        </Container> */}
-        <hr />
-        <Stack
-          component="footer"
-          direction="row"
-          sx={{ justifyContent: "space-evenly" }}
-        >
-          <Typography variant="h5" color="primary">
-            J&P CANDLES
-          </Typography>
+        <a href="https://www.jpcandles.cz">
+          {" "}
           <Box
             component="img"
             src={logo}
@@ -36,13 +37,10 @@ const Footer = () => {
             height="25"
             alt="Logo"
           />
-          <Typography variant="h5" color="primary">
-            © Jiří Vecko
-          </Typography>
-        </Stack>
-      </>
-    );
-
-}
+        </a>
+      </Stack>
+    </>
+  );
+};
 
 export default Footer;
