@@ -108,7 +108,7 @@ import { Divider } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { List } from "@mui/material";
 import { ListItem } from "@mui/material";
-import logo from "../../assets/JP_logo_black.png";
+import logo from "../../assets/JP_logo_white_small.png";
 import { Grid } from "@mui/material";
 import { Tabs } from "@mui/material";
 import { Tab } from "@mui/material";
@@ -142,10 +142,13 @@ export default function NavbarJP() {
             sx={{ mr: 2 }}
           >
             <Link href="/">
-              <img src={logo} width="140" height="35" alt="Logo" />
+              <img src={logo} 
+              width="100" 
+              //height="35" 
+              alt="Logo" />
             </Link>
           </IconButton>
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Grid container>
               <Grid item xs={12}>
                 {navigationLinks.map((item) => (

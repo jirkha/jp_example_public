@@ -23,8 +23,8 @@ export default function Home() {
         další.
       </Typography>
       <Typography color="primary" variant="h5" sx={{ mt: 3 }}>
-        Pokud se chcete dozvědět něco víc o autorovi této aplikace, navštivte
-        osobní stránku <a href="https://www.jirivecko.cz">www.jirivecko.cz</a>.
+        Pokud se chcete dozvědět více o tvůrci této aplikace, navštivte {" "}
+        <a href="https://www.jirivecko.cz">www.jirivecko.cz</a>.
         {/* <Link sx={{ ml: 1 }} 
         //href="/aboutme"
         href="/aboutme#/aboutme/"
